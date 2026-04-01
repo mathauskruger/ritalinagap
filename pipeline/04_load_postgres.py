@@ -26,10 +26,11 @@ from pathlib import Path
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
-BASE_DIR = Path(__file__).parent.parent
+SCRIPTS_DIR = Path(__file__).resolve().parent
+BASE_DIR = SCRIPTS_DIR.parent
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
 
-load_dotenv(r"C:\Users\kruge\Desktop\ritalina_gap\.env", override=True)
+load_dotenv(BASE_DIR / ".env", override=True)
 print(f"DEBUG senha: {os.getenv('DB_PASSWORD')}")
 
 

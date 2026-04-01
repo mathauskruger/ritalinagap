@@ -1,0 +1,15 @@
+# --- SEGURANÇA (CRÍTICO) ---
+.env
+secrets.toml
+auth.json
+
+# --- DADOS PESADOS E PRIVADOS ---
+data/raw/
+data/processed/*.csv
+!data/processed/metilfenidato_exemplo.csv
+
+# --- AMBIENTE E CACHE ---
+__pycache__/
+venv/
+.venv/
+.vscode/
