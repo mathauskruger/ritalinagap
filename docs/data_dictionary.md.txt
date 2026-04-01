@@ -1,0 +1,35 @@
+# Dicionário de Dados — RitalinaGap
+
+## dispensacao_metilfenidato
+Fonte: ANVISA/SNGPC — farmácias privadas
+
+| Coluna | Tipo | Descrição |
+|--------|------|-----------|
+| ano | int | Ano da dispensação |
+| mes | int | Mês da dispensação (1-12) |
+| uf | char(2) | Sigla do estado |
+| municipio | varchar | Nome do município |
+| codigo_ibge | char(7) | Código IBGE do município |
+| principio_ativo | varchar | Sempre "METILFENIDATO" |
+| nome_comercial | varchar | Ritalina, Concerta, Ritalina LA, etc. |
+| concentracao | varchar | 10mg, 18mg, 27mg, 36mg, 54mg |
+| forma_farmaceutica | varchar | Comprimido, cápsula, etc. |
+| quantidade_unidades | int | Unidades (comprimidos) dispensadas |
+| quantidade_caixas | int | Caixas dispensadas |
+
+## atendimentos_tdah
+Fonte: DataSUS/SIA — ambulatório do SUS
+
+| Coluna | Tipo | Descrição |
+|--------|------|-----------|
+| ano | int | Ano do atendimento |
+| mes | int | Mês do atendimento (1-12) |
+| uf | char(2) | Sigla do estado |
+| municipio | varchar | Código do município do paciente |
+| codigo_ibge | char(6) | Código IBGE |
+| cid_principal | char(4) | F900, F901, F908 ou F909 |
+| procedimento | varchar | Código do procedimento SIA |
+| quantidade_aprovada | int | Atendimentos aprovados |
+| quantidade_apresentada | int | Atendimentos apresentados |
+
+## CID

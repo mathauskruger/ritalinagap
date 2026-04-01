@@ -1,0 +1,17 @@
+{
+  "anvisa": {
+    "fonte": "ANVISA/SNGPC",
+    "timestamp": "2026-03-30T22:44:03.579607",
+    "total_registros": 360,
+    "problemas": [],
+    "aprovado": true
+  },
+  "datasus": {
+    "fonte": "DataSUS/SIA",
+    "timestamp": "2026-03-30T22:44:03.588390",
+    "total_registros": 864,
+    "problemas": [],
+    "aprovado": true
+  },
+  "total_problemas": 0
+}

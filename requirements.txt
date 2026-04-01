@@ -1,0 +1,9 @@
+pysus
+pandas
+psycopg2-binary
+sqlalchemy
+requests
+python-dotenv
+openai
+streamlit
+plotly

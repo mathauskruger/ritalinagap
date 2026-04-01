@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: ritalinagap_db
+    environment:
+      POSTGRES_DB: ritalinagap
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ritalina123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d   # roda schema.sql automaticamente
+    restart: unless-stopped
+
+  superset:
+    image: apache/superset:3.1.0
+    container_name: ritalinagap_superset
+    environment:
+      SUPERSET_SECRET_KEY: "ritalinagap-secret-key-troque-em-prod"
+    ports:
+      - "8088:8088"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  pgdata:
